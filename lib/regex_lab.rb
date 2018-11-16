@@ -24,6 +24,10 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 def valid_phone_number?(phone)
-  if phone.match(/(\W{3})\s*(\W{3})(\W{4})/)
+  if phone.match(/(\d{3})(\W*\s*)(\d{3})(\W*\s*)(\d{4})/)
+    return true
+  else
+    return false
+  end
 end
 
